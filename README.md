@@ -29,9 +29,14 @@ The project is structured with standard web development files:
 * `style.css`: The CSS file for all the styling and visual presentation.
 * `script.js`: The JavaScript file containing the game logic and interactivity.
 
-## AI Collaboration
+## Reflections on AI Collaboration with Google Gemini 2.5 Flash
 
-This project was a collaborative effort with Google Gemini 2.5. The development process involved providing requirements and iterating on the code based on the AI's generated suggestions and implementations. This README itself was also generated with the assistance of the AI.
+This project served as a valuable experiment in collaborating with generative AI for software development. The experience using Google Gemini 2.5 was exceptionally positive, demonstrating strong capabilities in programming and maintaining consistency throughout the development process.
+
+Compared to other models, such as paid models by OpenAI (like gpt-4o-mini) and X's Grok model, Gemini 2.5 proved to be much better at coding and easier to work with for this task. Its strong reasoning abilities, fast response times, and capacity to provide lengthy, comprehensive code files in a single response significantly streamlined the development workflow – an area where other models often present challenges.
+
+Following this experiment, I have found myself incorporating Gemini into my development process more frequently and highly recommend others to try it out, especially while it is currently available for free.
+
 
 ## Getting Started
 

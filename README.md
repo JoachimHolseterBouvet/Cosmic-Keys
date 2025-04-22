@@ -2,6 +2,8 @@
 
 ![image](https://github.com/user-attachments/assets/07d8ff5a-2074-4d92-a267-61324d1559a9)
 
+## [Try it here!](https://joachimholseterbouvet.github.io/Cosmic-Keys/)
+
 
 ## A Generative AI Experiment
 

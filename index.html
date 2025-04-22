@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cosmic Keys</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-dark text-light">
+    <div
+      class="container d-flex flex-column align-items-center justify-content-center vh-100"
+    >
+      <div
+        id="start-screen"
+        class="position-fixed w-100 h-100 d-flex flex-column justify-content-center align-items-center"
+        style="z-index: 10"
+      >
+        <h2 class="mb-4">Select Keyboard Layout</h2>
+        <select
+          id="keyboard-layout-select"
+          class="form-control form-control-lg mb-4"
+        >
+          <option value="standard">Standard QWERTY</option>
+          <option value="nordic">Nordic QWERTY (Æ, Ø, Å)</option>
+        </select>
+        <button id="start-button" class="btn btn-success btn-lg">Start</button>
+      </div>
+      <h1 class="mb-3">Cosmic Keys</h1>
+      <div id="timer" class="mb-2" style="display: none">Time: 60</div>
+      <div id="score" class="mb-4">Score: 0</div>
+      <div id="keyboard">
+        <div class="row justify-content-center mb-2">
+          <div class="key">Q</div>
+          <div class="key">W</div>
+          <div class="key">E</div>
+          <div class="key">R</div>
+          <div class="key">T</div>
+          <div class="key">Y</div>
+          <div class="key">U</div>
+          <div class="key">I</div>
+          <div class="key">O</div>
+          <div class="key">P</div>
+          <div class="key">Å</div>
+        </div>
+        <div class="row justify-content-center mb-2">
+          <div class="key">A</div>
+          <div class="key">S</div>
+          <div class="key">D</div>
+          <div class="key">F</div>
+          <div class="key">G</div>
+          <div class="key">H</div>
+          <div class="key">J</div>
+          <div class="key">K</div>
+          <div class="key">L</div>
+          <div class="key">Ø</div>
+          <div class="key">Æ</div>
+        </div>
+        <div class="row justify-content-center mb-2">
+          <div class="key">Z</div>
+          <div class="key">X</div>
+          <div class="key">C</div>
+          <div class="key">V</div>
+          <div class="key">B</div>
+          <div class="key">N</div>
+          <div class="key">M</div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="key space" style="width: 300px">&nbsp;</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

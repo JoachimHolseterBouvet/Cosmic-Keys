@@ -1,0 +1,171 @@
+/* Reset some default styles and set a futuristic font */
+body {
+  font-family: "Orbitron", sans-serif; /* You might need to import this font or choose another */
+  margin: 0; /* Remove default body margins */
+  padding: 0;
+  overflow: hidden; /* Prevent scrollbars */
+  background: linear-gradient(
+    to bottom,
+    #000428,
+    #004e92
+  ); /* Dark gradient background */
+  min-height: 100vh; /* Ensure the gradient covers the entire viewport height */
+  width: 100vw; /* Ensure the gradient covers the entire viewport width */
+}
+
+/* Remove Bootstrap's default container padding that might affect positioning */
+.container {
+  position: relative;
+  z-index: 1; /* Ensure content is above background */
+  padding-left: 0; /* Remove left padding */
+  padding-right: 0; /* Remove right padding */
+  max-width: 100%; /* Allow container to be full width if needed */
+}
+
+#start-screen {
+  background-color: rgba(0, 0, 0, 0.6); /* Adjusted transparency */
+  /* Ensure it covers the FULL viewport */
+  position: fixed; /* Use fixed to cover the entire viewport */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Cover full viewport width */
+  height: 100vh; /* Cover full viewport height */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+/* Added class to hide the start screen */
+.start-screen-hidden {
+  display: none !important; /* Use !important to ensure it overrides other styles */
+}
+
+#start-button {
+  padding: 20px 40px;
+  font-size: 1.5em;
+  background-color: #00bcd4; /* Teal-ish color */
+  color: #fff;
+  border: 2px solid #00bcd4;
+  box-shadow: 0 0 10px #00bcd4; /* Glowing effect */
+  transition: background-color 0.3s ease;
+}
+
+#start-button:hover {
+  background-color: #008ba3;
+  border-color: #008ba3;
+}
+
+h1 {
+  color: #00ffff; /* Bright cyan for the title */
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff; /* Stronger glow for title */
+  letter-spacing: 5px; /* Add some spacing between letters */
+  font-size: 2.5em; /* Increase title size */
+  margin-bottom: 20px; /* More space below title */
+}
+
+h2 {
+  color: #eee; /* Light color for the layout selection title */
+  margin-bottom: 10px;
+}
+
+#timer,
+#score {
+  color: #00cc66; /* Greenish color for timer and score */
+  text-shadow: 0 0 5px #00cc66; /* Subtle glow */
+  font-size: 1.5em; /* Increase font size */
+  margin-bottom: 10px; /* Space between timer and score */
+}
+
+#keyboard-layout-select {
+  margin-bottom: 20px;
+  width: 280px; /* Increased width for the dropdown */
+  background-color: #333;
+  color: #00ffcc;
+  border-color: #00ffcc;
+}
+
+#keyboard {
+  margin-top: 30px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px; /* Reduced margin bottom to bring rows closer */
+  /* Removed general margin-left rules */
+}
+
+/* Standard QWERTY Skewing */
+#keyboard.standard-layout .row:nth-child(2) {
+  margin-left: 25px; /* Adjust for standard QWERTY skew */
+}
+
+#keyboard.standard-layout .row:nth-child(3) {
+  margin-left: 50px; /* Adjust for standard QWERTY skew */
+}
+
+/* Nordic QWERTY (as per your HTML structure) Skewing */
+#keyboard.nordic-layout .row:nth-child(2) {
+  margin-left: 30px; /* Keep value that worked for your Nordic layout */
+}
+
+#keyboard.nordic-layout .row:nth-child(3) {
+  margin-left: 60px; /* Keep value that worked for your Nordic layout */
+}
+
+.key {
+  background-color: #222;
+  color: #00ffcc; /* Cyan text */
+  border: 1px solid #00ffcc;
+  padding: 15px 10px; /* Adjusted horizontal padding */
+  margin: 4px; /* Slightly reduced margin to fit skewed layout */
+  border-radius: 5px;
+  cursor: default;
+  user-select: none;
+  width: 50px; /* Explicit width for most keys */
+  height: 50px; /* Explicit height for most keys */
+  display: flex; /* Use flexbox to center content */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  text-align: center;
+  box-shadow: 0 0 5px #00ffcc; /* Subtle glow */
+  transition: background-color 0.1s ease, color 0.1s ease;
+}
+
+.key.space {
+  width: 300px; /* Keep specific width for space bar */
+  /* Adjust padding or margin if needed for alignment in the skewed layout */
+}
+
+.key.active {
+  background-color: #00aaff; /* Brighter blue */
+  color: #fff;
+  box-shadow: 0 0 15px #00aaff; /* Stronger glow */
+}
+
+.key.incorrect {
+  background-color: #ff3366; /* Reddish color */
+  color: #fff;
+  box-shadow: 0 0 10px #ff3366;
+}
+
+.key.correct {
+  background-color: #00cc66; /* Green color */
+  color: #fff;
+  box-shadow: 0 0 10px #00cc66;
+}
+
+/* Class to hide keys */
+.key.hidden-key {
+  display: none !important; /* Hide the key */
+}
+
+/* Ensure the blurred effect is applied correctly */
+/* We need to apply the blur to the container's children,
+   but ensure the container itself doesn't have padding
+   that affects the visual result of the blur. */
+.container.blurred > *:not(#start-screen) {
+  filter: blur(5px);
+}
